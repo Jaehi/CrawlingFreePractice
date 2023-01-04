@@ -23,6 +23,14 @@ class MainActivity : AppCompatActivity() {
                 Log.d("crawling Title","${it.attr("title")}")
 
                 Log.d("crawling Herf","${it.attr("href").split("=")[1]}")
+
+                val code = it.attr("href").split("=")[1]
+
+                val posterUrl = "https://movie.naver.com/movie/bi/mi/photoViewPopup.naver?movieCode=$code"
+
+                Log.d("crawling Poster","${posterUrl}")
+
+
             }
         }
 
